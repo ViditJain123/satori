@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Static Site</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-img">
+      <span class="join-waitlist">Join Waitlist</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Roadmap</a></li>
+      <li><a href="#">Mining</a></li>
+      <li><a href="#">Join</a></li>
+      <li><a href="#">Get Early Access</a></li>
+      <li><a href="#">Download App</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <img src="{{ url_for('static', filename='images/satoriwithlogo.png') }}" alt="Satori with Logo" class="hero-logo">
+      <div class="search-bar">
+        <img src="{{ url_for('static', filename='images/search.png') }}" alt="Search Icon" class="search-icon">
+        <input type="text" placeholder="Eg: Weather forecast of Poland during next week" class="search-input">
+      </div>
+      <p class="hero-description">Satori Predicts the Future of Everything <br>
+        All Predictions are freely available </p>
+      <div class="bottom-text">
+        <p class="bottom-textt">Video Explanation of Satori and It’s Principals</p>
+        <a href="#" class="hero-button"><p class="bottom-text-buttom">Play Now</p></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
