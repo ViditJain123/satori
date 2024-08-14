@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'sailecBold';
+  src: url('../fonts/Sailec Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sailecLight';
+  src: url('../fonts/Sailec Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sailecMedium';
+  src: url('../fonts/Sailec Medium.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -117,10 +132,12 @@ body {
 }
 
 .hero-description {
-  font-weight: bold;
+  font-family: "sailecBold";
   margin-bottom: 30px;
   color: #000;
-  font-size: 24px; 
+  font-size: 20s  px; 
+  letter-spacing: 3px;
+  word-spacing: 5px;
 }
 
 .bottom-text {
@@ -128,33 +145,127 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  margin-top: 100px;
 }
 
 .bottom-textt {
   color: #000;
+  font-family: "sailecLight";
+  word-spacing: 5px;
+
 }
 
 .bottom-text-button {
   color: #000;
+
 }
 
-.hero-button {
-  margin-top: 10px;
-  padding: 10px 20px;
+.hero-button {  
   border: 2px solid black;
   background-color: transparent;
   color: white;
   font-size: 18px;
-  text-decoration: none;
   border-radius: 30px;
   transition: background-color 0.3s ease;
   height: 54px;
+  width: 222px;
+  cursor: pointer;
+  text-align: center;
 }
+
+.hero-button-bottom {  
+  border: 3px solid black;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  height: 44px;
+  width: 222px;
+  cursor: pointer;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-button-text {
+  color: #000;
+  font-family: "Averia Sans Libre", sans-serif;
+}
+
 
 .hero-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.nav-link-text {
+  font-family: "sailecLight";
+}
+
+.mid-textt {  
+  max-width: 500px;
+  font-family: "Averia Sans Libre", sans-serif;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.mid-text-small {
+  max-width: 700px;
+  font-family: "sailecLight";
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2.5px; 
+  margin-top: 80px;
+}
+
+.description-hero {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: full;
+  margin-top: 100px;
+}
+
+.mid-text-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: full;
+}
+
+.bnwimg{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.litepaper-text {
+  font-family: "sailecMedium";
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  margin-bottom: 50px;
+}
 
 
 @media (max-width: 768px) {
