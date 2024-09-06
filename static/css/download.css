@@ -1,0 +1,153 @@
+/* Font Faces */
+@font-face {
+    font-family: 'SailecBold';
+    src: url('../fonts/Sailec Bold.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'SailecLight';
+    src: url('../fonts/Sailec Light.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'SailecMedium';
+    src: url('../fonts/Sailec Medium.ttf') format('truetype');
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for centering vertically */
+    font-family: 'Averia Sans Libre', Arial, sans-serif;
+    background-color: #E7E7E7;
+    color: #000;
+    text-align: center;
+}
+  
+.navbar-container {
+    position: fixed; /* Stick the navbar to the top */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    height: 60px;
+    margin-bottom: 40px;
+    padding: 0;
+    background-color: #EAEAEA; /* Adjust the background if needed */
+}
+  
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Full height for vertical centering */
+    max-width: 100%; /* Allow the container to stretch to the full width */
+    margin: 0 auto;
+    padding-top: 0; /* Adjust padding as per design */
+    text-align: center;
+}
+  
+.main-title {
+    font-family: 'Averia Sans Libre', sans-serif;
+    font-size: 60px;
+    margin: 172px 0 40px 0;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+}
+  
+.main-subtitle {
+    max-width: 70%;
+    font-family: "sailecLight";
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2.5px; 
+    text-align: center; /* Center-aligns the text */
+    margin: 0 auto;
+}
+  
+.steps-heading {
+    font-family: 'SailecBold', sans-serif;
+    font-size: 1.25rem;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+  
+.steps-note {
+    max-width: 70%;
+    font-family: "sailecLight";
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2.5px; 
+    margin: 0 auto;
+}
+  
+.instruction-card {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 984px;
+    height: 268px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #000; /* Thin black border */
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+    font-family: 'SailecMedium', sans-serif;
+    font-size: 1.1rem;
+    color: #000;
+    text-align: center;
+}
+  
+.instruction-card p {
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For devices smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 48px; /* Decrease the font size for smaller screens */
+        margin: 150px 0 30px 0; /* Adjust top margin */
+    }
+
+    .main-subtitle {
+        font-size: 18px; /* Smaller font size */
+        max-width: 90%; /* Allow more text space */
+    }
+
+    .instruction-card {
+        width: 90%; /* Full width for smaller screens */
+        height: auto; /* Adjust height for responsiveness */
+        padding: 20px;
+    }
+
+    .instruction-card p {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+/* For devices smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .navbar-container {
+        height: 50px; /* Adjust navbar height */
+    }
+
+    .main-title {
+        font-size: 36px; /* Decrease font size for small phones */
+        margin: 100px 0 20px 0; /* Adjust top margin */
+    }
+
+    .main-subtitle {
+        font-size: 16px; /* Smaller font for mobile */
+    }
+
+    .instruction-card {
+        padding: 15px; /* Less padding for small devices */
+    }
+
+    .instruction-card p {
+        font-size: 0.9rem; /* Further adjust text size */
+    }
+}
