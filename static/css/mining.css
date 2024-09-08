@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'sailecBold';
+  src: url('../fonts/Sailec Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sailecLight';
+  src: url('../fonts/Sailec Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sailecMedium';
+  src: url('../fonts/Sailec Medium.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Averia Sans Libre', Arial, sans-serif;
+  background-color: #E7E7E7;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 40px;
+  padding: 0;
+  background-color: #EAEAEA;
+}
+
+.main-content h1 {
+  font-family: 'Averia Sans Libre', sans-serif;
+  font-size: 30px;
+  color: #000;
+  letter-spacing: 0.2em;
+  margin: 200px 0 40px 0;
+  max-width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+}
+
+.main-content p {
+  max-width: 70%;
+  font-family: 'sailecLight';
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-family: 'Averia Sans Libre', sans-serif;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  margin: 10vh 0 5vh 0;
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+.distribution-rate-section h2,
+.fair-launch-section h2,
+.audit-section h2 {
+  font-size: clamp(2rem, 3vw, 4rem); 
+}
+
+
+.graph-placeholder {
+  margin: 332px 0;
+  padding: 50px;
+  font-family: 'Sailec', sans-serif;
+}
+
+.audit-links {
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'sailecLight';
+  font-weight: 400;
+  color: black;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.audit-links a {
+  text-decoration: underline;
+  color: black;
+  font-weight: 400;
+}
+
+.audit-links li {
+  margin: 20px 0;
+}
+
+.sailec-bold {
+  font-family: 'sailecBold', sans-serif;
+}

@@ -6,5 +6,17 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/roadmap')
+def roadmap():
+    return render_template('roadmap.html')
+
+@app.route('/mining')
+def mining():
+    return render_template('mining.html')
+
+@app.route('/download')
+def download():
+    return render_template('download.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

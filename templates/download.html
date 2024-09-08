@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@400&family=Sailec:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar-container">
+        {% include 'navbar.html' %}
+    </div>
+    <div class="content-wrapper">
+        <h1 class="main-title">START YOUR JOURNEY</h1>
+        <p class="main-subtitle">Satori runs inside of docker, isolated from the rest of the machine.</p>
+        
+        <h2 class="steps-heading">HERE ARE THE STEPS TO FOLLOW TO INSTALL SATORI ON YOUR DEVICE</h2>
+        <p class="steps-note">Note: Minimum Requirements for Running Satori</p>
+
+        <div class="instruction-card">
+            <p>1. DOWNLOAD AND INSTALL DOCKER</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
