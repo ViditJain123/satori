@@ -17,6 +17,7 @@
   </head>
 
   <body>
+    <!-- Navbar Section -->
     <nav class="navbar">
       <div class="logo">
         <img
@@ -40,47 +41,48 @@
       </ul>
     </nav>
 
-    <div class="hero-section">
-      <div class="hero-content">
-        <img
-          src="{{ url_for('static', filename='images/satoriwithlogo.png') }}"
-          alt="Satori with Logo"
-          class="hero-logo"
-        />
-        <div class="search-bar">
+    <!-- Fade Container Section -->
+    <div id="fade-container" class="hidden">
+      <div class="hero-section">
+        <div class="hero-content">
           <img
-            src="{{ url_for('static', filename='images/search.png') }}"
-            alt="Search Icon"
-            class="search-icon"
+            src="{{ url_for('static', filename='images/satoriwithlogo.png') }}"
+            alt="Satori with Logo"
+            class="hero-logo"
           />
-          <input
-            type="text"
-            placeholder="Eg: Weather forecast of Poland during next week"
-            class="search-input"
-          />
-        </div>
-        <p class="hero-description">
-          Satori Predicts the Future of Everything <br />
-          All Predictions are freely available
-        </p>
-        <div class="bottom-text">
-          <p class="bottom-textt">
-            Video Explanation of Satori and It’s Principals
+          <div class="search-bar">
+            <img
+              src="{{ url_for('static', filename='images/search.png') }}"
+              alt="Search Icon"
+              class="search-icon"
+            />
+            <input
+              type="text"
+              placeholder="Eg: Weather forecast of Poland during next week"
+              class="search-input"
+            />
+          </div>
+          <p class="hero-description">
+            Satori Predicts the Future of Everything <br />
+            All Predictions are freely available
           </p>
-          <a href=""
-            ><div class="hero-button-bottom">
-              <p class="hero-button-text">Play Now</p>
-            </div></a
-          >
+          <div class="bottom-text">
+            <p class="bottom-textt">
+              Video Explanation of Satori and It’s Principals
+            </p>
+            <a href="javascript:void(0)">
+              <div class="hero-button-bottom">
+                <p class="hero-button-text">Play Now</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="description-hero">
-      
+      <div class="description-hero">
         <div class="mid-text-div">
           <p class="mid-textt">
-            SATORI IS AN OPEN SOUCE, COMMUNITY DRIVEN PROJECT
+            SATORI IS AN OPEN SOURCE, COMMUNITY DRIVEN PROJECT
           </p>
         </div>
         <div>
@@ -106,6 +108,7 @@
             width: 100%;
           "
         ></iframe>
+      </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
