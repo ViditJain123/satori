@@ -38,7 +38,7 @@ body {
   color: #000;
   letter-spacing: 0.2em;
   margin: 200px 0 40px 0;
-  max-width: 80%;
+  max-width: 1050px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -46,7 +46,16 @@ body {
 }
 
 .main-content p {
-  max-width: 70%;
+  max-width: 900px;
+  font-family: 'sailecLight';
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.distribution-rate-section p {
+  max-width: 800px;
   font-family: 'sailecLight';
   font-size: 20px;
   text-align: center;
@@ -100,4 +109,23 @@ h2 {
 
 .sailec-bold {
   font-family: 'sailecBold', sans-serif;
+}
+/* Fade-in Fade-out Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Initially hide the content */
+.hidden {
+  opacity: 0;
+}
+
+/* Apply the fade-in animation */
+#fade-container {
+  animation: fadeIn 2s ease-in-out; /* 2 seconds for the fade effect */
 }

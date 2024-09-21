@@ -14,31 +14,34 @@
     <div class="Navroadmap">
         {% include 'navbar.html' %}
     </div>
-    <div class="container">
-        <h2>ROADMAP</h2>
-        <p>Satori's efforts can be broken into three broad initiatives.<br>Through incremental improvements, Satori aims at accurate decentralized prediction of our collective future.</p>
-        <div class="status-boxes">
-            <div class="status-box completed">
-                <div class="icon"></div>
-                <span>completed</span>
+
+    <div id="fade-container" class="hidden">
+        <div class="container">
+            <h2>ROADMAP</h2>
+            <p>Satori's efforts can be broken into three broad initiatives.<br>Through incremental improvements, Satori aims at accurate decentralized prediction of our collective future.</p>
+            <div class="status-boxes">
+                <div class="status-box completed">
+                    <div class="icon"></div>
+                    <span>completed</span>
+                </div>
+                <div class="status-box">
+                    <div class="icon"></div>
+                    <span>up next</span>
+                </div>
             </div>
-            <div class="status-box">
-                <div class="icon"></div>
-                <span>up next</span>
-            </div>
-        </div>
-        <div class="icons">
-            <div class="icon-item">
-                <img src="{{ url_for('static', filename='images/aiengine.png') }}" alt="AI Engine">
-                <p>AI Engine</p>
-            </div>
-            <div class="icon-item">
-                <img src="{{ url_for('static', filename='images/earth.png') }}" alt="Decentralisation">
-                <p>Decentralisation</p>
-            </div>
-            <div class="icon-item">
-                <img src="{{ url_for('static', filename='images/building.png') }}" alt="Infrastructure">
-                <p>Infrastructure</p>
+            <div class="icons">
+                <div class="icon-item">
+                    <img src="{{ url_for('static', filename='images/aiengine.png') }}" alt="AI Engine">
+                    <p>AI Engine</p>
+                </div>
+                <div class="icon-item">
+                    <img src="{{ url_for('static', filename='images/earth.png') }}" alt="Decentralisation">
+                    <p>Decentralisation</p>
+                </div>
+                <div class="icon-item">
+                    <img src="{{ url_for('static', filename='images/building.png') }}" alt="Infrastructure">
+                    <p>Infrastructure</p>
+                </div>
             </div>
         </div>
     </div>
