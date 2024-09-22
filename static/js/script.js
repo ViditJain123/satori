@@ -20,14 +20,9 @@ function fadeContent() {
 document.addEventListener('DOMContentLoaded', function() {
   const fadeContainer = document.getElementById('fade-container');
   
-  // Use requestAnimationFrame for smoother transition
-  requestAnimationFrame(() => {
-    fadeContainer.classList.add('fade-out'); // Trigger fade out immediately
-  });
-  
-  // Step 2: After fade-out completes, fade back in
+  // Ensure the container starts as invisible (handled by CSS)
+  // Trigger fade-in after a short delay to ensure it appears smoothly
   setTimeout(() => {
-    fadeContainer.classList.remove('fade-out'); // Remove fade-out class
-    fadeContainer.classList.add('fade-in'); // Trigger fade-in
-  }, 1000); // Start fade-in 2 seconds after fade-out (adjust timing as needed)
+    fadeContainer.classList.add('fade-in');
+  }, 100); // Delay to ensure the effect appears
 });

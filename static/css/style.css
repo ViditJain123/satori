@@ -381,17 +381,27 @@ a:active {
 
 }
 #fade-container {
-  opacity: 1; /* Initially visible */
-  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
+  opacity: 0; /* Start fully invisible */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Fade-in effect */
+#fade-container.fade-in {
+  opacity: 1; /* Make content visible */
+}
+
+/* #fade-container {
+  opacity: 1; 
+  transition: opacity 1s ease-in-out; 
 }
 
 #fade-container.fade-out {
-  opacity: 0; /* Fade-out effect */
+  opacity: 0; 
 }
 
 #fade-container.fade-in {
-  opacity: 1; /* Fade-in effect */
-}
+  opacity: 1; 
+} */
 
 
 /* 

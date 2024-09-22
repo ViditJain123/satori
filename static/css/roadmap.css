@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Zen Maru Gothic";
   src: local(ZenMaruGothic Light),
-  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.tff") format("tff"),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.ttf") format("truetype"),
   local(ZenMaruGothic Light);
   font-weight: 300;
 }
@@ -35,6 +35,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .Navroadmap {
@@ -47,6 +50,7 @@ body {
   max-width: 90%;
   margin: 1px;
   text-align: center;
+  padding-bottom: 100px; /* Added padding to trigger scrollbar */
 }
 
 .container h2 {
@@ -55,7 +59,7 @@ body {
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.2em;
-  margin: 172px 0 40px 0;
+  margin: 272px 0 40px 0;
 }
 
 .container p {
@@ -67,14 +71,10 @@ body {
   margin-bottom: 30px;
 }
 
-p {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
 .status-boxes {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 60px;
   margin-bottom: 50px;
 }
 
@@ -82,17 +82,26 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
+  font-family: 'Typewriter Press', sans-serif;
 }
 
 .status-box .icon {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   border: 2px solid #333;
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.status-text {
+  font-size: 20px;
+  font-family: 'Typewriter Press', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .icons {
@@ -133,39 +142,6 @@ p {
   }
 }
 
-.status-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-bottom: 50px;
-}
-
-.status-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  font-family: 'Typewriter Press', sans-serif;
-}
-
-.status-box .icon {
-  width: 34px;
-  height: 34px;
-  border: 2px solid #333;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.status-text {
-  font-size: 20px;
-  font-family: 'Typewriter Press', sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -176,14 +152,17 @@ p {
 }
 
 #fade-container {
-  opacity: 1; /* Initially visible */
-  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 #fade-container.fade-out {
-  opacity: 0; /* Fade-out effect */
+  opacity: 0;
 }
 
 #fade-container.fade-in {
-  opacity: 1; /* Fade-in effect */
+  opacity: 1;
+}
+.empty-container {
+  height: 400px; /* Adjust height as needed */
 }
