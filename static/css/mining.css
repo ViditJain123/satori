@@ -1,16 +1,24 @@
 @font-face {
-  font-family: 'sailecBold';
-  src: url('../fonts/Sailec Bold.ttf') format('truetype');
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Light),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.tff") format("tff"),
+  local(ZenMaruGothic Light);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Medium),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.tff") format("tff"),
+  local(ZenMaruGothic Medium);
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: 'sailecLight';
-  src: url('../fonts/Sailec Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'sailecMedium';
-  src: url('../fonts/Sailec Medium.ttf') format('truetype');
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Bold),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.tff") format("tff"),
+  local(ZenMaruGothic Bold);
+  font-weight: 700;
 }
 
 body {
@@ -23,7 +31,7 @@ body {
 }
 
 .navbar-container {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   height: 60px;
@@ -47,16 +55,20 @@ body {
 
 .main-content p {
   max-width: 900px;
-  font-family: 'sailecLight';
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 20px;
   text-align: center;
   letter-spacing: 2.5px;
   margin-left: auto;
+  font-weight: 200;
   margin-right: auto;
+  opacity: 0.65;
+  
+
 }
 .distribution-rate-section p {
   max-width: 800px;
-  font-family: 'sailecLight';
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 20px;
   text-align: center;
   letter-spacing: 2.5px;
@@ -82,14 +94,14 @@ h2 {
 .graph-placeholder {
   margin: 332px 0;
   padding: 50px;
-  font-family: 'Sailec', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .audit-links {
   list-style-type: none;
   font-size: 20px;
   line-height: 26px;
-  font-family: 'sailecLight';
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: 400;
   color: black;
   letter-spacing: 0.2em;
@@ -107,8 +119,9 @@ h2 {
   margin: 20px 0;
 }
 
-.sailec-bold {
-  font-family: 'sailecBold', sans-serif;
+.zenmaru-bold {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
 }
 /* Fade-in Fade-out Animations */
 @keyframes fadeIn {
@@ -125,7 +138,15 @@ h2 {
   opacity: 0;
 }
 
-/* Apply the fade-in animation */
 #fade-container {
-  animation: fadeIn 2s ease-in-out; /* 2 seconds for the fade effect */
+  opacity: 1; /* Initially visible */
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
+}
+
+#fade-container.fade-out {
+  opacity: 0; /* Fade-out effect */
+}
+
+#fade-container.fade-in {
+  opacity: 1; /* Fade-in effect */
 }

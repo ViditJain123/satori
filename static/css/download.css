@@ -12,6 +12,29 @@
     font-family: 'SailecMedium';
     src: url('../fonts/Sailec Medium.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: "Zen Maru Gothic";
+    src: local(ZenMaruGothic Light),
+    url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.tff") format("tff"),
+    local(ZenMaruGothic Light);
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Zen Maru Gothic";
+    src: local(ZenMaruGothic Medium),
+    url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.tff") format("tff"),
+    local(ZenMaruGothic Medium);
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "Zen Maru Gothic";
+    src: local(ZenMaruGothic Bold),
+    url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.tff") format("tff"),
+    local(ZenMaruGothic Bold);
+    font-weight: 700;
+  }
   
 body {
     margin: 0;
@@ -55,7 +78,9 @@ body {
   
 .main-subtitle {
     max-width: 70%;
-    font-family: "sailecLight";
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 300;
+    opacity: 0.75;
     font-size: 20px;
     text-align: center;
     letter-spacing: 2.5px;
@@ -63,18 +88,20 @@ body {
 }
   
 .steps-heading {
-    font-family: 'SailecBold', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 1.25rem;
     color: #000;
     margin-bottom: 14px;
-    font-weight: 400;
+    font-weight: 00;
     padding: 0;
 }
   
 .steps-note {
     max-width: 70%;
-    font-family: "sailecLight";
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 20px;
+    font-weight: 300;
+    opacity: 0.75;
     text-align: center;
     letter-spacing: 2.5px;
     margin-bottom: 115px;
@@ -93,7 +120,7 @@ body {
     background-color: #F4F4F4;
     border-radius: 8px;
     box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
-    font-family: 'SailecMedium', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 1rem;
     color: #000;
     text-align: center;
@@ -124,7 +151,24 @@ body {
         font-size: 0.85rem;
     }
 }
-@keyframes fadeIn {
+
+#fade-container {
+    opacity: 1; /* Initially visible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
+}
+
+#fade-container.fade-out {
+    opacity: 0; /* Fade-out effect */
+}
+
+#fade-container.fade-in {
+    opacity: 1; /* Fade-in effect */
+}
+
+
+
+
+/* @keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -133,12 +177,10 @@ body {
     }
   }
   
-  /* Initially hide the content */
   .hidden {
     opacity: 0;
   }
   
-  /* Apply the fade-in animation */
   #fade-container {
-    animation: fadeIn 2s ease-in-out; /* 2 seconds for the fade effect */
-  }
+    animation: fadeIn 2s ease-in-out;
+  } */
