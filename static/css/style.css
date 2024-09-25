@@ -13,10 +13,34 @@
   src: url('../fonts/Sailec Medium.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Light),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Light.tff") format("tff"),
+  local(ZenMaruGothic Light);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Medium),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.tff") format("tff"),
+  local(ZenMaruGothic Medium);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Zen Maru Gothic";
+  src: local(ZenMaruGothic Bold),
+  url("../fonts/Zen_Maru_Gothic/ZenMaruGothic-Bold.tff") format("tff"),
+  local(ZenMaruGothic Bold);
+  font-weight: 700;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 
 .navbar {
   display: flex;
@@ -24,8 +48,10 @@ body {
   align-items: center;
   background-color: #CDCDCD;
   padding: 10px 20px;
-  position: relative;
-  z-index: 1; /* Ensure navbar stays above the dropdown */
+  margin: 10px 10px; /* Adjust margins to control space around the navbar */
+  border-radius: 100px;
+  position: relative; /* This makes the navbar scrollable with the page */
+  z-index: 1; /* Keep it above dropdown or other elements */
 }
 
 .logo {
@@ -132,7 +158,8 @@ body {
 }
 
 .hero-description {
-  font-family: "sailecBold";
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
   margin-bottom: 30px;
   color: #000;
   font-size: 20s  px; 
@@ -150,8 +177,11 @@ body {
 
 .bottom-textt {
   color: #000;
-  font-family: "sailecLight";
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 300;
+    opacity: 0.75;
   word-spacing: 5px;
+  font-weight: 300;
 
 }
 
@@ -217,20 +247,24 @@ a:active {
 }
 
 .nav-link-text {
-  font-family: "sailecLight";
+  font-family: "Zen Maru Gothic", sans-serif;
+
 }
 
 .mid-textt {  
   max-width: 500px;
-  font-family: "Averia Sans Libre", sans-serif;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 30px;
   text-align: center;
+  font-weight: 300;
 
 }
 
 .mid-text-small {
   max-width: 700px;
-  font-family: "sailecLight";
+  font-family: "Zen Maru Gothic",sans-serif;
+  font-weight: 300;
+    opacity: 0.75;
   font-size: 20px;
   text-align: center;
   letter-spacing: 2.5px; 
@@ -346,8 +380,31 @@ a:active {
   }
 
 }
+#fade-container {
+  opacity: 0; /* Start fully invisible */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Fade-in effect */
+#fade-container.fade-in {
+  opacity: 1; /* Make content visible */
+}
+
+/* #fade-container {
+  opacity: 1; 
+  transition: opacity 1s ease-in-out; 
+}
+
+#fade-container.fade-out {
+  opacity: 0; 
+}
+
+#fade-container.fade-in {
+  opacity: 1; 
+} */
 
 
+/* 
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -357,12 +414,10 @@ a:active {
   }
 }
 
-/* Initially hide the content */
 .hidden {
   opacity: 0;
 }
 
-/* Apply the fade-in animation */
 #fade-container {
-  animation: fadeIn 2s ease-in-out; /* 2 seconds for the fade effect */
-}
+  animation: fadeIn 2s ease-in-out; 
+} */

@@ -5,11 +5,9 @@ function toggleMenu() {
   hamburger.classList.toggle('active');
 }
 
-// Fade-in Fade-out functionality
 function fadeContent() {
   const fadeContainer = document.getElementById('fade-container');
   
-  // Add fade-out class
   fadeContainer.classList.add('fade-out');
   
   // Wait for the fade-out animation to complete before applying fade-in
@@ -19,8 +17,12 @@ function fadeContent() {
   }, 500); // Adjust this timing according to your animation duration
 }
 
-// JavaScript to remove hidden class after the page is loaded
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', function() {
   const fadeContainer = document.getElementById('fade-container');
-  fadeContainer.classList.remove('hidden');
+  
+  // Ensure the container starts as invisible (handled by CSS)
+  // Trigger fade-in after a short delay to ensure it appears smoothly
+  setTimeout(() => {
+    fadeContainer.classList.add('fade-in');
+  }, 100); // Delay to ensure the effect appears
 });
