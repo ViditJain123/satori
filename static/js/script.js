@@ -26,3 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fadeContainer.classList.add('fade-in');
   }, 100); // Delay to ensure the effect appears
 });
+
+function vtimeline_expand(item) {
+  const content = item.querySelector('.vtimeline-content');
+  content.classList.toggle('expanded');
+}
