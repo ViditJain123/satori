@@ -26,3 +26,27 @@ document.addEventListener('DOMContentLoaded', function() {
     fadeContainer.classList.add('fade-in');
   }, 100); // Delay to ensure the effect appears
 });
+
+function vtimeline_expand(item) {
+  const content = item.querySelector('.vtimeline-content');
+  content.classList.toggle('expanded');
+}
+function copyToClipboard(walletId, coinType) {
+  // Create a temporary input element to hold the wallet ID
+  const tempInput = document.createElement('input');
+  tempInput.value = walletId;
+  document.body.appendChild(tempInput);
+  
+  // Select the text in the input
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text to the clipboard
+  document.execCommand('copy');
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+
+  // Optionally, you can alert the user that the wallet ID has been copied
+  alert(`${coinType} Wallet ID copied to clipboard!`);
+}
