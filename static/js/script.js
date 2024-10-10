@@ -50,3 +50,32 @@ function copyToClipboard(walletId, coinType) {
   // Optionally, you can alert the user that the wallet ID has been copied
   alert(`${coinType} Wallet ID copied to clipboard!`);
 }
+
+const searchInput = document.querySelector('.search-input');
+const heroSection = document.querySelector('.hero-section');
+const contentToHide = document.querySelector('#content-to-hide'); // Target the content to hide
+
+searchInput.addEventListener('focus', () => {
+  // Hide the navbar and content below the search bar
+  heroSection.classList.add('search-active');
+  contentToHide.classList.add('hidden');
+});
+
+searchInput.addEventListener('blur', () => {
+  // Show the navbar and content again
+  heroSection.classList.remove('search-active');
+  contentToHide.classList.remove('hidden');
+});
+function toggleStep(header) {
+  const step = header.parentElement;
+  const content = step.querySelector('.step-content');
+  const isOpen = step.classList.contains('open');
+
+  if (isOpen) {
+      content.style.maxHeight = null;
+      step.classList.remove('open');
+  } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      step.classList.add('open');
+  }
+}

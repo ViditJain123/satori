@@ -42,7 +42,7 @@
     </nav>
 
     <!-- Fade Container Section -->
-    <div id="fade-container" class="hidden">
+    <div id="fade-container-index">
       <div class="hero-section">
         <div class="hero-content">
           <img
@@ -62,19 +62,23 @@
               class="search-input"
             />
           </div>
-          <p class="hero-description">
-            Satori Predicts the Future of Everything <br />
-            All Predictions are freely available
-          </p>
-          <div class="bottom-text">
-            <p class="bottom-textt">
-              Video Explanation of Satori and It’s Principals
+
+          <!-- Content to hide on search bar focus -->
+          <div id="content-to-hide">
+            <p class="hero-description">
+              Satori Predicts the Future of Everything <br />
+              All Predictions are freely available
             </p>
-            <a href="javascript:void(0)">
-              <div class="hero-button-bottom">
-                <p class="hero-button-text">Play Now</p>
-              </div>
-            </a>
+            <div class="bottom-text">
+              <p class="bottom-textt">
+                Video Explanation of Satori and It’s Principals
+              </p>
+              <a href="javascript:void(0)">
+                <div class="hero-button-bottom">
+                  <p class="hero-button-text">Play Now</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -110,6 +114,7 @@
         ></iframe>
       </div>
     </div>
+    
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
