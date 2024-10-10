@@ -20,6 +20,9 @@ def download():
 @app.route('/join')
 def join():
     return render_template('join.html')
+@app.route('/try')
+def tryi():
+    return render_template('try.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
